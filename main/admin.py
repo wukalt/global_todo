@@ -1,11 +1,15 @@
 from django.contrib import admin
 from django.utils.html import mark_safe
-from .models import Priority, Event
+from .models import (
+    Priority,
+    Event,
+    BirthDayEvent
+)
 
 
 @admin.register(Priority)
 class PriorityAdmin(admin.ModelAdmin):
-    list_display = ["name", "color", "icon"]
+    list_display = ["name", "icon"]
 
     def color_display(self, obj):
         return mark_safe(f"<div style='width: 20px; height: 20px; background-color: {obj.color}; border-radius: 4px;'></div>")
@@ -17,3 +21,4 @@ class PriorityAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Event)
+admin.site.register(BirthDayEvent)

@@ -9,7 +9,6 @@ class IconChoices(models.TextChoices):
 
 class Priority(models.Model):
     name = models.CharField(max_length=50)
-    color = models.CharField(max_length=7, default='#000000')
     icon = models.CharField(
         max_length=100,
         choices=IconChoices.choices,
