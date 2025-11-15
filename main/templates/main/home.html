@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="header"><i class="fa-solid fa-note-sticky"></i> My Modern Todos</div>
+
+    <!-- Menu -->
+    <div class="menu">
+        <div class="menu-header" onclick="toggleSubmenu()">
+            <span><i class="fa-solid fa-cake-candles"></i> Birthdays</span>
+            <span><i class="fa-solid fa-chevron-down"></i></span>
+        </div>
+        <div class="submenu" id="submenu">
+            <div class="submenu-item">John Doe - 12 Jan</div>
+            <div class="submenu-item">Jane Smith - 23 Mar</div>
+            <div class="submenu-item">Alice Johnson - 5 Jul</div>
+        </div>
+    </div>
+
+    <!-- Notes List -->
+    <div id="notes-list">
+        <div class="note-item medium">
+            <div class="left">
+                <i class="fa-solid fa-circle-exclamation priority-icon"></i>
+                <span>Call Client</span>
+            </div>
+            <div class="actions">
+                <i class="fa-solid fa-check check"></i>
+                <i class="fa-solid fa-pen edit"></i>
+                <i class="fa-solid fa-trash delete"></i>
+            </div>
+        </div>
+        <div class="note-item low">
+            <div class="left">
+                <i class="fa-solid fa-circle-check priority-icon"></i>
+                <span>Grocery Shopping</span>
+            </div>
+            <div class="actions">
+                <i class="fa-solid fa-check check"></i>
+                <i class="fa-solid fa-pen edit"></i>
+                <i class="fa-solid fa-trash delete"></i>
+            </div>
+        </div>
+        <div class="note-item high">
+            <div class="left">
+                <i class="fa-solid fa-flag priority-icon"></i>
+                <span>Weekly Planning</span>
+            </div>
+            <div class="actions">
+                <i class="fa-solid fa-check check"></i>
+                <i class="fa-solid fa-pen edit"></i>
+                <i class="fa-solid fa-trash delete"></i>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}

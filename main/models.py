@@ -28,3 +28,12 @@ class Event(models.Model):
     def __str__(self):
         return self.name
     
+    
+class BirthDayEvent(models.Model):
+    person_name = models.CharField(max_length=150)
+    datetime = models.DateField()
+    priority = models.ForeignKey(Priority, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return self.person_name
+    
